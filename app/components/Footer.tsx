@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="flex gap-4">
           <a href="#" className="hover:text-white transition"><FaInstagram className="h-6 w-6 text-white"/></a>
           <a href="#" className="hover:text-white transition"><FaXTwitter className="h-6 w-6"/></a>
-          <a href="" className="hover:text-white transition"><FaGithub className="h-6 w-6"/></a>
+          <a href="https://github.com/vikasas/Bow" className="hover:text-white transition"><FaGithub className="h-6 w-6"/></a>
         </div>
       </div>
       <div className="border-t border-gray-800 mt-6 pt-6 text-center text-xs text-gray-500">

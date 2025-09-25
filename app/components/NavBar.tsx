@@ -30,10 +30,10 @@ export default function NavBar() {
       className={`w-full bg-background transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"} shadow-xl fixed z-50`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-3 md:px-10">
-        <div className="flex items-center gap-2">
+        <Link href={"https://bow-beta.vercel.app/"}><div className="flex items-center gap-2">
           <FaRobot className="h-9 w-9 text-teal-500" />
           <h2 className="font-bold text-3xl text-white">BOW</h2>
-        </div>
+        </div></Link>
         <div className="hidden md:flex items-center gap-10">
           <ul className="flex gap-8 list-none">
            <li className="cursor-pointer text-white hover:text-teal-600 transition-colors duration-300">Home</li>
