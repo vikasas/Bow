@@ -38,7 +38,7 @@ export default function Home() {
       </motion.p>
 
       <motion.div
-        className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
+        className="mt-6 flex flex-col sm:flex-row gap-3 items-center justify-center lg:justify-start"
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"

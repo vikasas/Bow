@@ -32,9 +32,9 @@ export default function ExampleDemo() {
 
   return (
     <div className="bg-gradient-to-br from-green-400 via-teal-600 to-green-500 
-                    rounded-2xl shadow-2xl max-w-lg w-full p-8 
-                    transform -rotate-6 hover:-rotate-0 hover:shadow-3xl 
-                    transition-all duration-300 ease-out">
+                 rounded-2xl shadow-2xl max-w-lg w-full p-8 
+                 transform md:-rotate-6 md:hover:rotate-0 hover:shadow-3xl 
+                 transition-all duration-300 ease-out">
       <h1 className="text-3xl font-bold text-center text-white mb-6">
         Ask Bino Anything
       </h1>
