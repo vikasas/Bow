@@ -14,55 +14,57 @@ const fadeUp = {
 export default function Home() {
   return (
     <div className="w-full scroll-smooth flex flex-col items-center">
-      <div className="w-full min-h-screen bg-radial-[at_50%_50%] from-zinc-900 via-zinc-1000 to-background to-80% flex justify-center items-center px-4">
-        <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <div className="text-center lg:text-left">
-            <motion.h2
-              className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-br from-green-400 via-teal-600 to-green-500 bg-clip-text text-transparent leading-snug"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              AI – charged Conversation Management Platform
-            </motion.h2>
+      <div className="w-full min-h-screen bg-radial-[at_50%_50%] from-zinc-900 via-zinc-1000 to-background to-80% flex justify-center items-center px-4 pt-16">
+  <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <div className="text-center lg:text-left">
+      <motion.h2
+        className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-br from-green-400 via-teal-600 to-green-500 bg-clip-text text-transparent leading-snug"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        AI – charged Conversation Management Platform
+      </motion.h2>
 
-            <motion.p
-              className="mt-3 text-gray-400 text-sm sm:text-base md:text-lg"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              Transform your customer interactions with our intelligent conversation management platform.
-            </motion.p>
+      <motion.p
+        className="mt-3 text-gray-400 text-sm sm:text-base md:text-lg"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        Transform your customer interactions with our intelligent conversation management platform.
+      </motion.p>
 
-            <motion.div
-              className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <Link href={"https://bow.chat/register"}>
-                <Button text="Request Demo" size="lg" varient="primary" />
-              </Link>
-              <Link href={"https://bow.chat/register"}>
-                <Button text="Talk To Sales" size="lg" varient="secondary" />
-              </Link>
-            </motion.div>
-          </div>
-          <motion.div
-            className="flex justify-center"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <ExampleDemo />
-          </motion.div>
-        </div>
-      </div>
+      <motion.div
+        className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <Link href={"https://bow.chat/register"}>
+          <Button text="Request Demo" size="lg" varient="primary" />
+        </Link>
+        <Link href={"https://bow.chat/register"}>
+          <Button text="Talk To Sales" size="lg" varient="secondary" />
+        </Link>
+      </motion.div>
+    </div>
+
+    <motion.div
+      className="flex justify-center"
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      <ExampleDemo />
+    </motion.div>
+  </div>
+</div>
+
       <div className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-4 py-10">
         <motion.h2
           className="text-3xl sm:text-4xl md:text-5xl font-bold text-center bg-gradient-to-br from-green-400 via-teal-600 to-green-500 bg-clip-text text-transparent"
