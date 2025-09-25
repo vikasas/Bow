@@ -13,12 +13,12 @@ const fadeUp = {
 
 export default function Home() {
   return (
-    <div className="w-screen scroll-smooth flex flex-col items-center">
-      <div className="w-screen h-screen bg-radial-[at_50%_50%] from-zinc-900 via-zinc-1000 to-background to-80% flex justify-center items-center">
-        <div className="w-5/6 max-w-6xl grid grid-cols-2 gap-10 items-center">
-          <div>
+    <div className="w-full scroll-smooth flex flex-col items-center">
+      <div className="w-full min-h-screen bg-radial-[at_50%_50%] from-zinc-900 via-zinc-1000 to-background to-80% flex justify-center items-center px-4">
+        <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div className="text-center lg:text-left">
             <motion.h2
-              className="text-5xl font-bold bg-gradient-to-br from-green-400 via-teal-600 to-green-500 bg-clip-text text-transparent"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-br from-green-400 via-teal-600 to-green-500 bg-clip-text text-transparent leading-snug"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -28,7 +28,7 @@ export default function Home() {
             </motion.h2>
 
             <motion.p
-              className="mt-3 text-gray-400"
+              className="mt-3 text-gray-400 text-sm sm:text-base md:text-lg"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -38,7 +38,7 @@ export default function Home() {
             </motion.p>
 
             <motion.div
-              className="mt-6 flex gap-x-3"
+              className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -52,8 +52,8 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
-
           <motion.div
+            className="flex justify-center"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -63,19 +63,19 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-      <div className="w-screen h-screen bg-black flex flex-col items-center justify-center">
+      <div className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-4 py-10">
         <motion.h2
-          className="text-5xl font-bold bg-gradient-to-br from-green-400 via-teal-600 to-green-500 bg-clip-text text-transparent"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center bg-gradient-to-br from-green-400 via-teal-600 to-green-500 bg-clip-text text-transparent"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Why Choose US ?
+          Why Choose Us?
         </motion.h2>
 
-        <div className="w-5/6 mt-6 flex items-center justify-center grid grid-cols-2 gap-x-5 gap-y-10">
-          <div className="flex flex-col gap-y-10">
+        <div className="w-full max-w-6xl mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex flex-col gap-6">
             <motion.div
               variants={fadeUp}
               initial="hidden"
@@ -85,7 +85,7 @@ export default function Home() {
               <Card
                 varient="secondary"
                 heading="Manage WhatsApp groups"
-                content="Manage WhatsApp groups Streamline your communication and save time with BOW CMP's group scheduling feature. Whether you're planning events, sending reminders, or coordinating announcements, our intuitive platform makes scheduling for multiple groups a breeze"
+                content="Streamline your communication and save time with BOW CMP's group scheduling feature. Whether you're planning events, sending reminders, or coordinating announcements, our intuitive platform makes scheduling for multiple groups a breeze."
               />
             </motion.div>
 
@@ -98,12 +98,11 @@ export default function Home() {
               <Card
                 varient="secondary"
                 heading="Intelligent routing of conversations"
-                content="Intelligent routing of conversations Simplify your daily routine with BOW CMP's Automation Rules. Save time, enhance customer attention, and enjoy a streamlined workflow by letting automation handle repetitive tasks"
+                content="Simplify your daily routine with BOW CMP's Automation Rules. Save time, enhance customer attention, and enjoy a streamlined workflow by letting automation handle repetitive tasks."
               />
             </motion.div>
           </div>
-
-          <div className="flex flex-col gap-y-10">
+          <div className="flex flex-col gap-6">
             <motion.div
               variants={fadeUp}
               initial="hidden"
@@ -113,7 +112,7 @@ export default function Home() {
               <Card
                 varient="secondary"
                 heading="Quick Connect"
-                content="Connect your agent WhatsApp inboxes to BOW CMP within 2 minutes by just scanning the QR code"
+                content="Connect your agent WhatsApp inboxes to BOW CMP within 2 minutes by just scanning the QR code."
               />
             </motion.div>
 
@@ -126,7 +125,7 @@ export default function Home() {
               <Card
                 varient="secondary"
                 heading="Secure data handling"
-                content="BOW CMP handles your data in a shielded environment so that your data remains confidential and protected"
+                content="BOW CMP handles your data in a shielded environment so that your data remains confidential and protected."
               />
             </motion.div>
           </div>
