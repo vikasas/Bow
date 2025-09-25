@@ -1,103 +1,137 @@
-import Image from "next/image";
+"use client";
+
+import ExampleDemo from "./components/ExampleDemo";
+import { Button } from "./components/Button";
+import Card from "./components/Card";
+import Link from "next/link";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="w-screen scroll-smooth flex flex-col items-center">
+      <div className="w-screen h-screen bg-radial-[at_50%_50%] from-zinc-900 via-zinc-1000 to-background to-80% flex justify-center items-center">
+        <div className="w-5/6 max-w-6xl grid grid-cols-2 gap-10 items-center">
+          <div>
+            <motion.h2
+              className="text-5xl font-bold bg-gradient-to-br from-green-400 via-teal-600 to-green-500 bg-clip-text text-transparent"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              AI – charged Conversation Management Platform
+            </motion.h2>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <motion.p
+              className="mt-3 text-gray-400"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              Transform your customer interactions with our intelligent conversation management platform.
+            </motion.p>
+
+            <motion.div
+              className="mt-6 flex gap-x-3"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <Link href={"https://bow.chat/register"}>
+                <Button text="Request Demo" size="lg" varient="primary" />
+              </Link>
+              <Link href={"https://bow.chat/register"}>
+                <Button text="Talk To Sales" size="lg" varient="secondary" />
+              </Link>
+            </motion.div>
+          </div>
+
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <ExampleDemo />
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </div>
+      <div className="w-screen h-screen bg-black flex flex-col items-center justify-center">
+        <motion.h2
+          className="text-5xl font-bold bg-gradient-to-br from-green-400 via-teal-600 to-green-500 bg-clip-text text-transparent"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          Why Choose US ?
+        </motion.h2>
+
+        <div className="w-5/6 mt-6 flex items-center justify-center grid grid-cols-2 gap-x-5 gap-y-10">
+          <div className="flex flex-col gap-y-10">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <Card
+                varient="secondary"
+                heading="Manage WhatsApp groups"
+                content="Manage WhatsApp groups Streamline your communication and save time with BOW CMP's group scheduling feature. Whether you're planning events, sending reminders, or coordinating announcements, our intuitive platform makes scheduling for multiple groups a breeze"
+              />
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <Card
+                varient="secondary"
+                heading="Intelligent routing of conversations"
+                content="Intelligent routing of conversations Simplify your daily routine with BOW CMP's Automation Rules. Save time, enhance customer attention, and enjoy a streamlined workflow by letting automation handle repetitive tasks"
+              />
+            </motion.div>
+          </div>
+
+          <div className="flex flex-col gap-y-10">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <Card
+                varient="secondary"
+                heading="Quick Connect"
+                content="Connect your agent WhatsApp inboxes to BOW CMP within 2 minutes by just scanning the QR code"
+              />
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <Card
+                varient="secondary"
+                heading="Secure data handling"
+                content="BOW CMP handles your data in a shielded environment so that your data remains confidential and protected"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
